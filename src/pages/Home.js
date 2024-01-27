@@ -19,7 +19,7 @@ const Home = () => {
     var HHA = moment().format('hh:mm A')
 
     useEffect(() => {
-        const url = "https://api.weatherapi.com/v1/forecast.json?key=fe1b386df6c541aba8c105248212610&q=auto:ip&aqi=yes&days=5&alert=yes";
+        const url = "https://api.weatherapi.com/v1/forecast.json?key=<<YOUR_API_KEY>>&q=auto:ip&aqi=yes&days=5&alert=yes";
         isOnline && fetch(url)
             .then(res => res.json())
             .then(data => {
