@@ -1,8 +1,20 @@
-# Getting Started with Create React App
+# Weather App
+An open source weather web app written in ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Get Started
+Follow the steps below to get your app up and running
 
-## Available Scripts
+## Getting an API key
+ - Go to [weatherapi.com](https://www.weatherapi.com/) in your browser and create an account
+ - Go to your [dashboard](https://www.weatherapi.com/my/) and copy the API key listed at the top of the page
+
+## Changing the API key
+Go to `src > pages > Home.js` and in `line 22` replace `<YOUR_API_KEY>>` with the your API key
+
+## Installing dependencies
+Copy the root destination of the folder and open it up in cmd and run the command `npm install` to install all the required dependencies
+
+# Available Scripts
 
 In the project directory, you can run:
 
@@ -39,33 +51,8 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
+# Disclaimer
+I don't know if you can do anything illegal with this but if you can, I won't be responsible and also you shouldn't do it
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 "# Weather" 
