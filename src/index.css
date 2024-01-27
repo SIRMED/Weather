@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800;900&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  transition: .2s ease;
+}
+
+body {
+  animation: breathBackgroundImage 200s ease infinite ;
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.054);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+
+
+
+/* Home page */
+
+.home {
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* if you want some space between .current and .forecast */
+}
+
+.home .current {
+  /* background-color: red; */
+  border-radius: 5px;
+  /* display: inline-block; */
+  /* vertical-align: top; */
+  width: calc(30% - 20px);
+  margin-right: 20px;
+  height: calc(100vh - 40px);
+  color: white;
+  position: relative;
+}
+
+.home .current .icon {
+  margin-top: 10%;
+}
+
+.home .current .temp {
+  font-size: 8rem;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 0px 4px 60px rgba(0, 0, 0, 0.68);
+}
+
+.home .current .condition-text {
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 0px 4px 10px rgb(0, 0, 0);
+}
+
+.home .current .location {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.home .current .location * {
+  display: inline-block;
+  vertical-align: middle;
+  text-shadow: 0px 4px 10px rgb(0, 0, 0);
+}
+
+.home .current .boxes {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.home .current .boxes .box {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(50% - 15px);
+  aspect-ratio: 1/0.7;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.50);
+  backdrop-filter: blur(40px);
+  position: relative;
+  text-align: left !important;
+  cursor: pointer;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.386);
+}
+
+.home .current .boxes .box:hover {
+  background-color: rgba(0, 0, 0, 0.80);
+  transform: scale(1.2);
+}
+
+.home .current .boxes .box .content {
+  position: absolute;
+  bottom: 20px;
+}
+
+.home .current .boxes .box .content .label {
+  color: rgb(185, 181, 181);
+}
+
+.home .current .boxes .box .content .value {
+  font-size: 4rem;
+}
+
+.home .current .boxes .box .content .value span {
+  margin-left: 5px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+
+.home .forecast {
+  /* background-color: rgba(0, 0, 0, 0.60);
+  backdrop-filter: blur(40px); */
+  /* display: inline-block;
+  vertical-align: top; */
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: calc(100vh - 40px);
+}
+
+.home .forecast .box {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.50);
+  backdrop-filter: blur(40px);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.386);
+  margin-bottom: 10px;
+  flex: 1;
+
+}
+
+.home .forecast .box:first-child,
+.home .forecast .box:nth-child(2) {
+  flex: 0.5;
+}
+
+.home .forecast .box:nth-child(3) {
+  margin: 0px;
+}
+
+.home .forecast .box.small {
+  width: calc(50% - 5px);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.home .forecast .box .title {
+  padding: 10px;
+  /* padding-bottom: 5px !important; */
+  /* border-bottom: 1px solid white; */
+  color: white;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: lighter;
+  /* margin-bottom: 3px; */
+}
+
+.home .forecast .box .content {
+  overflow-x: scroll;
+  white-space: nowrap;
+  border-radius: 20px;
+  height: calc(100% - 50px);
+}
+
+.home .forecast .box .content::-webkit-scrollbar {
+  display: none;
+}
+
+.home .forecast .box .content .hourly {
+  background: rgba(0, 0, 0, 0.08);
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 200px;
+  height: 225px;
+  cursor: pointer;
+  transition: .4s ease;
+  transition: width 500ms, background-color .2s;
+}
+
+.home .forecast .box .content .hourly.daily {
+  width: 500px;
+}
+
+.home .forecast .box .content .hourly .always {
+  height: 225px;
+  width: 210px;
+  border-right: 1px dashed rgba(128, 128, 128, 0.209);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.home .forecast .box .content .hourly.daily .always {
+  border-right: none;
+}
+
+.home .forecast .box .content .hourly .always .temp {
+  font-size: 3.3rem;
+  font-weight: 900;
+}
+
+.home .forecast .box .content .hourly .always .time {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: calc(100% - 40px);
+  color: rgba(255, 255, 255, 0.299);
+}
+
+.home .forecast .box .content .hourly:hover {
+  background-color: rgba(0, 0, 0, 0.45);
+  width: 800px;
+  transition: width 500ms 500ms, background-color .2s;
+}
+
+.home .forecast .box .content .hourly.daily:hover {
+  width: 500px;
+}
+
+.home .forecast .box .content .hourly .extended {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 10px 10px 30px;
+}
+
+.home .forecast .box .content .hourly:hover .extended .text-info {
+  margin-left: 0px;
+  opacity: 1;
+  transition-delay: 600ms;
+}
+
+.home .forecast .box .content .hourly .extended .text-info {
+  font-size: 34px;
+  font-weight: bolder;
+  /* margin-top: 12px; */
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+  opacity: 0;
+}
+
+.home .forecast .box .content .hourly.daily .extended .text-info {
+  opacity: 1;
+  margin-left: -20px;
+}
+
+.home .forecast .box .content .hourly .extended .text-info span {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.home .forecast .box .content .hourly:hover .extended .uv-info {
+  margin-top: 0px;
+  opacity: 1;
+  transition-delay: 600ms;
+}
+
+.home .forecast .box .content .hourly .extended .uv-info {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  border-radius: 20px;
+  width: 310px;
+  margin-left: 35px;
+  margin-top: 20px;
+  opacity: 0;
+  text-align: center;
+}
+
+.home .forecast .box .content .hourly .extended .uv-info img {
+  width: 100%;
+}
+
+
+
+.disclamer {
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  font-size: 12px;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+}
+
+.disclamer * {
+  color: rgba(255, 255, 255, 0.381);
+}
+
+
+
+
+
+/* Utils */
+
+.f-giant {
+  font-size: 90px;
+}
+
+.circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+  background-color: white;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.68);
+}
+
+
+/* Animation */
+
+@keyframes breathBackgroundImage {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (hover: none) {
+  * {
+    transition-delay: 0s !important;
+  }
+}
