@@ -53,6 +53,4 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 # Disclaimer
 I don't know if you can do anything illegal with this but if you can, I won't be responsible and also you shouldn't do it
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 "# Weather" 
