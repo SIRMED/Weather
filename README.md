@@ -1,4 +1,4 @@
-# Weather App
+# Weather App ⛅
 An open source weather web app written in ReactJS
 
 # Get Started
